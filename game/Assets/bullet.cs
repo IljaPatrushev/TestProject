@@ -19,9 +19,13 @@ public class bullet : MonoBehaviour {
 	}
 
 	void OnTriggerEnter2D(Collider2D other){
-	
-	
+		if (other.tag != "Player") {
 			other.SendMessageUpwards("takeDamage", damage,SendMessageOptions.DontRequireReceiver);
+
+		}
+	
+	
+			
 
 	}
 	

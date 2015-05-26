@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 public class Ship : MonoBehaviour {
 	public Rigidbody2D rb;
@@ -11,19 +12,30 @@ public class Ship : MonoBehaviour {
 	bool right = false;
 	bool left = false;
 	float timer = 0;
+	public int hp = 100;
+	GameObject canvas;
 
 	bool shootside = false;
 
 	Transform leftg;
 	Transform rightg;
+	GameObject androids;
 
 	// Use this for initialization
 	void Start () {
+		androids = GameObject.Find ("Canvas/androidit");
 		rb = GetComponent<Rigidbody2D> ();	
 		leftg = transform.Find ("Left");
 		rightg = transform.Find ("Right");
 
+		canvas = GameObject.Find ("Canvas/HP");
+
 	
+	}
+
+	void takeDamage (int d){
+		hp -= d;
+
 	}
 
 	void shoot() {
@@ -54,9 +66,22 @@ public class Ship : MonoBehaviour {
 		}
 
 	}
+	int androidit = 0;
 	
 	// Update is called once per frame
 	void Update () {
+
+		androids.GetComponent<Text> ().text = "Androidit: " + androidit.ToString();
+		if (Input.GetKeyDown (KeyCode.Space)) {
+			GameObject tmp = Instantiate (Resources.Load ("android1"), transform.position, transform.rotation) as GameObject;
+			android1 tmp2 = tmp.GetComponent<android1>();
+			tmp2.target = gameObject;
+			androidit++;
+
+			
+		}
+
+		canvas.GetComponent<Text> ().text = hp.ToString ();
 		
 		if(Input.GetMouseButton(0)) {
 						shoot ();
