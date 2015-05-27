@@ -23,6 +23,13 @@ public class Ship : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+		int savedUp = PlayerPrefs.GetInt ("PlayerHP");
+		if (savedUp > 0) {
+			hp = savedUp;
+
+		}
+
+
 		androids = GameObject.Find ("Canvas/androidit");
 		rb = GetComponent<Rigidbody2D> ();	
 		leftg = transform.Find ("Left");
@@ -70,6 +77,16 @@ public class Ship : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+
+		if (Input.GetKey ("escape")) {
+			Application.LoadLevel (1);
+		}
+
+		if (Input.GetKey (KeyCode.T)) {
+			PlayerPrefs.SetInt ("PlayerHP",hp);
+			PlayerPrefs.Save ();
+
+		}
 
 		androids.GetComponent<Text> ().text = "Androidit: " + androidit.ToString();
 		if (Input.GetKeyDown (KeyCode.Space)) {
