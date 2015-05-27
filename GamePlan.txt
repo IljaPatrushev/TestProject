@@ -1,0 +1,48 @@
+test 2d Unity game (name: PandaDestroyer)
+
+1) Default simple platformer
+
+Main hero(Pokemon/Slowpoke):
+
+	HP = 100
+	Attack: magic (unlimited mana)
+	Boost: fast speed
+
+Enemy(pandas and others trash units):
+
+	HP = 5-100(BOSS)
+	Attack: shooting and magic(Damage 1-5, BOSS - 25)
+	
+
+
+
+UI
+
+	HP count
+	Kills count
+
+Menu
+
+	Start
+	Exit
+
+Levels: (3 scenes - Menu(0), Main level(1), Bosslevel(2))
+
+	1 big level
+	Boss level ( <100 points ) -> GRATZZZZ
+
+
+
+Plan:
+
+	Graphics
+	Level
+		menu
+		mainlevel
+	Hero movement and magic
+	Enemy movement and magic
+	Bosslevel
+	
+	
+
+	
