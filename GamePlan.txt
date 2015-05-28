@@ -28,7 +28,7 @@ Menu
 
 Levels: (3 scenes - Menu(0), Main level(1), Bosslevel(2))
 
-	1 big level
+	1 big level (Enemies, coins etc.)
 	Boss level ( <100 points ) -> GRATZZZZ
 
 
