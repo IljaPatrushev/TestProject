@@ -11,11 +11,18 @@ public class Hero : MonoBehaviour {
 	bool down = false;
 	bool left = false;
 	bool right = false;
+	bool shootside = true;
+
+	Transform gung;
+
+
+	float timer = 0;
 
 	// Use this for initialization
 	void Start () {
 
 		rb = GetComponent<Rigidbody2D> ();
+		gung = transform.Find ("Gun");
 	
 	}
 	
@@ -41,6 +48,10 @@ public class Hero : MonoBehaviour {
 			left = true;
 		} 
 		else left = false;
+
+		if(Input.GetMouseButton(0)) {
+			shoot ();
+		}
 	
 	}
 
@@ -52,6 +63,22 @@ public class Hero : MonoBehaviour {
 		}
 
 	
+	}
+
+	void shoot(){
+		Debug.Log ("text");
+		if (timer < Time.time) {
+
+
+				GameObject tmp = Instantiate (Resources.Load ("beam"),gung.position,gung.rotation) as GameObject;
+				Bullet tmp2 = tmp.GetComponent<Bullet>();
+				tmp2.speed = 200;
+				tmp2.taga = transform.tag;
+				timer = Time.time +0.10f;
+
+
+		}
+
 	}
 
 	void FixedUpdate () {
