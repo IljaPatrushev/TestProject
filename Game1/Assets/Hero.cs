@@ -11,7 +11,7 @@ public class Hero : MonoBehaviour {
 	bool down = false;
 	bool left = false;
 	bool right = false;
-	bool shootside = true;
+	//bool shootside = true;
 
 	Transform gung;
 
@@ -66,7 +66,7 @@ public class Hero : MonoBehaviour {
 	}
 
 	void shoot(){
-		Debug.Log ("text");
+		//Debug.Log ("text");
 		if (timer < Time.time) {
 
 
