@@ -57,7 +57,7 @@ public class Hero : MonoBehaviour {
 
 	void OnCollisionEnter2D(Collision2D other){
 
-		if (other.collider.tag == "Ground") {
+		if (other.collider.tag == "Ground" || other.collider.tag == "Enemy") {
 
 			jump = true;
 		}

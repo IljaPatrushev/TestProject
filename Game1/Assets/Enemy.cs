@@ -33,6 +33,36 @@ public class Enemy : MonoBehaviour {
 	
 	}
 
+	void OnTriggerStay2D(Collider2D other){
+
+		if (other.tag == "Player") {
+
+			eshoot ();
+
+		}
+
+	}
+
+	/*void OnCollisionEnter2D(Collision2D other){
+
+		if (other.gameObject.tag == "Player") {
+			
+			eshoot ();
+			
+		}
+	}
+
+	void OnCollisionExit2D(Collision2D other){
+		Debug.Log ("OK");
+		if (other.gameObject.tag == "Player") {
+			
+			eshoot ();
+			
+		}
+
+	}
+	*/
+
 	void eshoot(){
 
 		if (timer < Time.time) {
@@ -46,6 +76,15 @@ public class Enemy : MonoBehaviour {
 			
 			
 		}
+	}
+
+	void FixedUpdate(){
+
+			
+
+		}
+
+	
 		/* void OnTriggerStay2D(CircleCollider2D other){
 		
 		if(other.tag == "Player"){
@@ -66,4 +105,3 @@ public class Enemy : MonoBehaviour {
 
 	}
 
-}
