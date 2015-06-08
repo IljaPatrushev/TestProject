@@ -64,7 +64,7 @@ public class Enemy : MonoBehaviour {
 			
 		}
 
-		if(other.gameObject.tag != "Enemy)"){
+		if(other.gameObject.tag != "Enemy"){
 
 			takeDamage();
 

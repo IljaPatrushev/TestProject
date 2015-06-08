@@ -14,8 +14,19 @@ public class Pokeball : MonoBehaviour {
 	void Start () {
 
 		rb = GetComponent<Rigidbody2D> ();
-		Destroy (gameObject, 5);
+		Destroy (gameObject, 3);
 
+	}
+
+	void OnTriggerEnter2D(Collider2D other){
+
+		if (other.tag == "Player") {
+			
+			
+			other.SendMessageUpwards("takeDamage",damage, SendMessageOptions.DontRequireReceiver);
+			
+			Destroy (gameObject);		
+		}
 	}
 	
 	

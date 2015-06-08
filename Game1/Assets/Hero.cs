@@ -5,6 +5,7 @@ public class Hero : MonoBehaviour {
 	public Rigidbody2D rb;
 	public int speed;
 	public int hyppy;
+	public int hp;
     
 
 	bool jump = true;
@@ -53,6 +54,10 @@ public class Hero : MonoBehaviour {
 		if(Input.GetMouseButton(0)) {
 			shoot ();
 		}
+
+		if (hp <= 0) {
+			Application.LoadLevel (Application.loadedLevel);
+		}
 	
 	}
 
@@ -63,11 +68,24 @@ public class Hero : MonoBehaviour {
 			jump = true;
 		}
 
+		if(other.gameObject.tag == "pokeball"){
+			
+			takeDamage();
+			
+		}
+
+
 
 
 
 
 	
+	}
+
+	void takeDamage(){
+
+		hp -= 5;
+
 	}
 
 	void shoot(){
