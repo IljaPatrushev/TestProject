@@ -6,6 +6,8 @@ public class Enemy : MonoBehaviour {
 	public Rigidbody2D rb;
 	public int hp;
 
+
+
 	// bool shootside = true;
 
 	Transform eGung;
@@ -21,6 +23,7 @@ public class Enemy : MonoBehaviour {
 		rb = GetComponent<Rigidbody2D> ();
 		eGung = transform.Find ("eGun");
 	
+	
 	}
 	
 	// Update is called once per frame
@@ -30,6 +33,9 @@ public class Enemy : MonoBehaviour {
 			eshoot ();
 		}
 
+		if (hp <= 0) {
+			Destroy (gameObject);
+		}
 	
 	}
 
@@ -43,25 +49,34 @@ public class Enemy : MonoBehaviour {
 
 	}
 
-	/*void OnCollisionEnter2D(Collision2D other){
+
+
+
+
+
+
+
+	void OnCollisionEnter2D(Collision2D other){
 
 		if (other.gameObject.tag == "Player") {
 			
 			eshoot ();
 			
 		}
-	}
 
-	void OnCollisionExit2D(Collision2D other){
-		Debug.Log ("OK");
-		if (other.gameObject.tag == "Player") {
-			
-			eshoot ();
-			
+		if(other.gameObject.tag != "Enemy)"){
+
+			takeDamage();
+
 		}
-
 	}
-	*/
+
+	void takeDamage(){
+
+		 hp -= 10;
+	}
+
+
 
 	void eshoot(){
 
@@ -78,11 +93,22 @@ public class Enemy : MonoBehaviour {
 		}
 	}
 
+	
+
+
+	/*void takeDamage(int d){
+
+
+
+		
+	}*/
+
 	void FixedUpdate(){
 
 			
 
 		}
+
 
 	
 		/* void OnTriggerStay2D(CircleCollider2D other){

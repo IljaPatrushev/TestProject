@@ -5,6 +5,7 @@ public class Hero : MonoBehaviour {
 	public Rigidbody2D rb;
 	public int speed;
 	public int hyppy;
+    
 
 	bool jump = true;
 	bool up = false;
@@ -61,6 +62,10 @@ public class Hero : MonoBehaviour {
 
 			jump = true;
 		}
+
+
+
+
 
 	
 	}

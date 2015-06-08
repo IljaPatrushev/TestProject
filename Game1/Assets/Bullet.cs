@@ -8,21 +8,27 @@ public class Bullet : MonoBehaviour {
 	public int damage;
 	public string taga;
 
+
 	// Use this for initialization
 	void Start () {
 
 		rb = GetComponent<Rigidbody2D> ();
-		Destroy (gameObject, 5);
+		Destroy (gameObject, 3);
 	
 	}
 
+
+
 	void OnTriggerEnter2D(Collider2D other){
-		if (other.tag != "Player") {
-			other.SendMessageUpwards("takeDamage", damage,SendMessageOptions.DontRequireReceiver);
-			
+
+		if (other.tag == "Enemy") {
+
+
+			other.SendMessageUpwards("takeDamage",damage, SendMessageOptions.DontRequireReceiver);
+
+			Destroy (gameObject);		
 		}
 	}
-
 	void FixedUpdate() {
 
 		rb.AddForce (transform.right * speed);
