@@ -6,8 +6,9 @@ public class Hero : MonoBehaviour {
 	public int speed;
 	public int hyppy;
 	public int hp;
+	public float move;
     
-
+	bool IsFacingRight;
 	bool jump = true;
 	bool up = false;
 	bool down = false;
@@ -58,7 +59,20 @@ public class Hero : MonoBehaviour {
 		if (hp <= 0) {
 			Application.LoadLevel (Application.loadedLevel);
 		}
+
+		if (move < 0 && !IsFacingRight)
+			Flip ();
+		else if (move > 0 && IsFacingRight)
+			Flip ();
 	
+	}
+
+	void Flip(){
+
+		IsFacingRight = !IsFacingRight;
+		Vector3 theScale = transform.localScale;
+		theScale.x *= -1;
+		transform.localScale = theScale;
 	}
 
 	void OnCollisionEnter2D(Collision2D other){
@@ -123,6 +137,10 @@ public class Hero : MonoBehaviour {
 		if (left) {
 			rb.AddForce (-transform.right * speed);
 		}
+
+		move = Input.GetAxis ("Horizontal");
+
+
 
 	}
 }
