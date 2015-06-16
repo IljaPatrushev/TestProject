@@ -10,6 +10,12 @@ public class HeroKamera : MonoBehaviour {
 		target = GameObject.FindGameObjectWithTag ("Player");
 	
 	}
+
+	void onGUI(){
+		
+		GUI.Box (new Rect (0, 0, 100, 100), "Points: ");
+		
+	}
 	
 	// Update is called once per frame
 	void Update () {

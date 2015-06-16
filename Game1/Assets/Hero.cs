@@ -6,7 +6,9 @@ public class Hero : MonoBehaviour {
 	public int speed;
 	public int hyppy;
 	public int hp;
+
 	public float move;
+	public float score;
     
 	bool IsFacingRight;
 	bool jump = true;
@@ -88,13 +90,23 @@ public class Hero : MonoBehaviour {
 			
 		}
 
+		if (other.collider.tag == "coin") {
 
-
-
+			score++;
+			Destroy (other.gameObject);
+		}
 
 
 	
 	}
+
+	void onGUI(){
+
+		GUI.Box (new Rect (0, 0, 100, 100), "Points: " + score);
+
+
+	}
+
 
 	void takeDamage(){
 
