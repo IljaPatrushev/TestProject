@@ -100,12 +100,7 @@ public class Hero : MonoBehaviour {
 	
 	}
 
-	void onGUI(){
 
-		GUI.Box (new Rect (0, 0, 100, 100), "Points: " + score);
-
-
-	}
 
 
 	void takeDamage(){
