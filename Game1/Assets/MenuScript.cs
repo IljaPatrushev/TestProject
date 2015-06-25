@@ -17,6 +17,7 @@ public class MenuScript : MonoBehaviour {
 		}
 		if (GUI.Button (new Rect (10,40, 100, 20), "Exit")) { // Screen.width/2,Screen.height/2 ,
 
+			Debug.Log("QUIT QUIT");
 			Application.Quit ();
 
 		}

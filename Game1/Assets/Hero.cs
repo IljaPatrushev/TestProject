@@ -66,6 +66,9 @@ public class Hero : MonoBehaviour {
 			Flip ();
 		else if (move > 0 && IsFacingRight)
 			Flip ();
+
+		if (Input.GetKey ("escape"))
+			Application.LoadLevel (0);
 	
 	}
 
