@@ -3,12 +3,13 @@ using System.Collections;
 
 public class Hero : MonoBehaviour {
 	public Rigidbody2D rb;
-	public int speed;
+	public float speed;
 	public int hyppy;
 	public int hp;
 
 	public float move;
 	public float score;
+	float boostTime = 0;
     
 	bool IsFacingRight;
 	bool jump = true;
@@ -16,6 +17,7 @@ public class Hero : MonoBehaviour {
 	bool down = false;
 	bool left = false;
 	bool right = false;
+	bool boosti = false;
 	//bool shootside = true;
 
 	Transform gung;
@@ -30,9 +32,17 @@ public class Hero : MonoBehaviour {
 		gung = transform.Find ("Gun");
 	
 	}
-	
+
 	// Update is called once per frame
 	void Update () {
+
+		if (boosti && Time.time < boostTime + 3) {
+			speed = 30f;
+		} else {
+			speed = 20f;
+			boosti = false;
+		}
+
 
 		if (Input.GetKey (KeyCode.W)){
 			up = true;
@@ -98,6 +108,20 @@ public class Hero : MonoBehaviour {
 			score++;
 			Destroy (other.gameObject);
 		}
+
+		if (other.collider.tag == "HPpot") {
+
+			hp = hp +5;
+			Destroy (other.gameObject);
+		}
+
+		if (other.collider.tag == "SpeedPot") {
+			boostTime = Time.time;
+			boosti = true;
+			Destroy (other.gameObject);
+
+		}
+
 
 
 	
