@@ -11,7 +11,7 @@ public class Hero : MonoBehaviour {
 	public float score;
 	float boostTime = 0;
     
-	bool IsFacingRight;
+	public static bool IsFacingRight;
 	bool jump = true;
 	bool up = false;
 	bool down = false;
@@ -82,7 +82,7 @@ public class Hero : MonoBehaviour {
 	
 	}
 
-	void Flip(){
+	 void Flip(){
 
 		IsFacingRight = !IsFacingRight;
 		Vector3 theScale = transform.localScale;
@@ -145,7 +145,7 @@ public class Hero : MonoBehaviour {
 				Bullet tmp2 = tmp.GetComponent<Bullet>();
 				tmp2.speed = 200;
 				tmp2.taga = transform.tag;
-				timer = Time.time +0.10f;
+				timer = Time.time +0.2f;
 
 
 		}

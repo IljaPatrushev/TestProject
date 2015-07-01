@@ -7,11 +7,17 @@ public class Bullet : MonoBehaviour {
 	public int speed = 200;
 	public int damage;
 	public string taga;
+	bool IFR;
+
+
+
+	//public bool IsFacingRight;
 
 
 	// Use this for initialization
 	void Start () {
 
+		IFR = Hero.IsFacingRight;
 		rb = GetComponent<Rigidbody2D> ();
 		Destroy (gameObject, 3);
 	
@@ -31,12 +37,30 @@ public class Bullet : MonoBehaviour {
 	}
 	void FixedUpdate() {
 
-		rb.AddForce (transform.right * speed);
-	}
+		if (IFR == false) {
+
+			rb.AddForce (transform.right * speed);
+
+		}
+
+		if (IFR == true) {
+
+			rb.AddForce (-transform.right * speed);
+		}
+
+
+
+
+	
+
+		// rb.AddForce (transform.right * speed);
+	} 
 
 	
 	// Update is called once per frame
 	void Update () {
+
+
 	
 	}
 }
