@@ -19,7 +19,7 @@ public class DiePlatformScript : MonoBehaviour {
 
 		if (col.gameObject.tag == "Player" || col.gameObject.name == "DiePlatform") {
 
-			Application.LoadLevel (Application.loadedLevel);
+			Application.LoadLevel(1);
 		}
 
 		
