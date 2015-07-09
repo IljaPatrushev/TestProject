@@ -90,6 +90,18 @@ public class Hero : MonoBehaviour {
 		transform.localScale = theScale;
 	}
 
+	void OnTriggerStay2D(Collider2D other){
+
+
+		if (Input.GetKey(KeyCode.Q)) {
+
+			Application.LoadLevel(1);
+		}
+	}
+
+
+
+
 	void OnCollisionEnter2D(Collision2D other){
 
 		if (other.collider.tag == "Ground" || other.collider.tag == "Enemy") {
@@ -121,6 +133,17 @@ public class Hero : MonoBehaviour {
 			Destroy (other.gameObject);
 
 		}
+
+		if (other.collider.tag == "GoLvl2"){
+
+			Application.LoadLevel (0);
+		}
+
+
+
+		
+
+
 
 
 

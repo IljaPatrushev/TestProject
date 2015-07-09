@@ -1,0 +1,66 @@
+Initialize engine version: 5.0.2f1 (0b02744d4013)
+GfxDevice: creating device client; threaded=1
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.0]
+    Renderer: Intel(R) HD Graphics 4400 (ID=0x41e)
+    Vendor:   Intel
+    VRAM:     128 MB
+Default GameObject Tag: InvWall already registered
+ 
+(Filename:  Line: 83)
+
+Begin MonoManager ReloadAssembly
+Platform assembly: C:\gitti\TestProject\Game1\Builds\test12_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading C:\gitti\TestProject\Game1\Builds\test12_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: C:\gitti\TestProject\Game1\Builds\test12_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading C:\gitti\TestProject\Game1\Builds\test12_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: C:\gitti\TestProject\Game1\Builds\test12_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading C:\gitti\TestProject\Game1\Builds\test12_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+- Completed reload, in  0.042 seconds
+desktop: 1920x1080 60Hz; virtual: 1920x1080 at 0,0
+<RI> Initializing input.
+XInput1_3.dll not found. Trying XInput9_1_0.dll instead...
+<RI> Input initialized.
+<RI> Initialized touch support.
+Platform assembly: C:\gitti\TestProject\Game1\Builds\test12_Data\Managed\System.Core.dll (this message is harmless)
+Platform assembly: C:\gitti\TestProject\Game1\Builds\test12_Data\Managed\System.dll (this message is harmless)
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 9.910583 ms
+
+Unloading 10 unused Assets to reduce memory usage. Loaded Objects now: 804.
+Total: 0.379736 ms (FindLiveObjects: 0.049806 ms CreateObjectMapping: 0.015394 ms MarkObjects: 0.291292 ms  DeleteObjects: 0.022639 ms)
+
+Unloading 2 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 1.029635 ms
+
+Unloading 2 unused Assets to reduce memory usage. Loaded Objects now: 804.
+Total: 0.267143 ms (FindLiveObjects: 0.037430 ms CreateObjectMapping: 0.013885 ms MarkObjects: 0.211300 ms  DeleteObjects: 0.003924 ms)
+
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 1.007902 ms
+
+Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 804.
+Total: 1.254821 ms (FindLiveObjects: 0.177492 ms CreateObjectMapping: 0.090859 ms MarkObjects: 0.950549 ms  DeleteObjects: 0.035015 ms)
+
+Unloading 2 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 2.579371 ms
+
+Unloading 2 unused Assets to reduce memory usage. Loaded Objects now: 804.
+Total: 0.275897 ms (FindLiveObjects: 0.051617 ms CreateObjectMapping: 0.012074 ms MarkObjects: 0.207376 ms  DeleteObjects: 0.003924 ms)
+
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.971075 ms
+
+Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 804.
+Total: 0.268653 ms (FindLiveObjects: 0.042561 ms CreateObjectMapping: 0.011772 ms MarkObjects: 0.205866 ms  DeleteObjects: 0.007848 ms)
+
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 2.035122 ms
+
+Unloading 58 unused Assets to reduce memory usage. Loaded Objects now: 244.
+Total: 0.380038 ms (FindLiveObjects: 0.031393 ms CreateObjectMapping: 0.012678 ms MarkObjects: 0.194698 ms  DeleteObjects: 0.140363 ms)
+
+QUIT QUIT
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
+
